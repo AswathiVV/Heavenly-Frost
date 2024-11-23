@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Home</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static '/css/home.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    {% csrf_token %}
+    <nav class="navbar navbar-expand-sm navbar-light bg-light shadow-sm">
+      <div class="container-fluid">
+  
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+  
+    
+          <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav me-auto mb-2 mb-sm-0">
+                  <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="javascript:void(0)">Home</a>
+                  </li>
+                  <!-- <li class="nav-item">
+                      <a class="nav-link" href="cart_display"><i class="bi bi-cart2"></i></a>
+                  </li> -->
+                  <li class="nav-item">
+                      <a class="nav-link" href="user_view_bookings">YourOrders</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="logout">Logout</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="cart_display"><i style="color: rgb(48, 45, 45);" class="bi bi-cart2"></i></a>
+                </li>
+                  
+              </ul>
+              
+        
+              <form class="d-flex">
+                <input class="form-control me-2" type="text" placeholder="Search">
+                <button class="btn" style="background-color: pink;" type="button">Search</button>
+              </form>
+          </div>
+      </div>
+  </nav>
+  
+<!--     
+    <nav class="navbar navbar-expand-sm navbar-white bg-white">
+        <div class="container-fluid">
+          
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="mynavbar">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="javascript:void(0)">Home |</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="cart_display">Cart |</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="user_view_bookings">Your Orders |</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="logout">Logout |</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="text" placeholder="Search">
+              <button class="btn btn-primary" type="button">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav> -->
+  <br>
+  <!-- <div class="img1">
+    <img src="{% static 'images/logo.jpg' %}" alt="Heavenly Frost Logo" class="logo-img">
+    <h1 class="logo-title">HEAVENLY FROST</h1>
+  </div> -->
+  <div class="container">
+    <div class="row justify-content-center align-items-center text-center">
+      <div class="col-12 col-md-6">
+        <div class="img1">
+          <img src="{% static 'images/logo.jpg' %}" alt="Heavenly Frost Logo" class="logo-img">
+          <h1 class="logo-title">HEAVENLY FROST</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+<br><br>
+  
+  
+  <div class="container-expand" >
+    
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+        <img src="{% static 'images/c1.jpg' %}" alt="" style="width:100%;">
+        
+      </div>
+
+      <div class="item">
+        <img src="{% static 'images/c2.jpg' %}" alt="" style="width:100%;">
+      </div>
+    
+      <div class="item">
+        <img src="{% static 'images/c3.jpg' %}" alt="" style="width:100%;">
+      </div>
+
+      <div class="item">
+        <img src="{% static 'images/c4.jpg' %}" alt="" style="width:100%;">
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+  </div>
+
+<br><br>
+<div class="container">
+  <h2 class="text-center mb-4" style="color: palevioletred;">Browse the Collections</h2><br>
+  <div class="row">
+      {% for pro in product %}
+      <div class="col-lg-4">
+        <a href="view_pro/{{pro.pk}}" style="text-decoration: none;">
+          
+          <div class="card">
+              <img class="card-img-top" src="{{pro.img.url}}" alt="Card image" >
+              <div class="card-body">
+                <h4 style="text-align: center;" class="card-title">{{pro.cake_name}}</h4>
+                <p style="text-align: center;" class="card-text">₹ {{pro.price}}</p>
+          
+              </div>
+            </div>
+          </a>
+
+      </div>
+      {% endfor %}
+  </div>
+  <br><br><br><br>
+</div>
+  <div class="container my-5">
+    <h2 class="text-center mb-4" style="color: palevioletred;">Our Products</h2><br>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="collection-item">
+                <a href=""><img src="{% static 'images/m1.png' %}" alt="Afternoon Tea at the Parlour" class="img-fluid"></a>
+                <!-- <a href="#" class="browse-btn btn btn-primary">Browse</a> -->
+            </div>
+        </div>
+        <div class="col-md-6 ">
+            <div class="collection-item">
+                <img src="{% static 'images/m2.png' %}" alt="Cupcakes" class="img-fluid">
+                <!-- <a href="#" class="browse-btn btn btn-primary">Browse</a> -->
+            </div>
+        </div>
+    </div>
+  </div> 
+
+
+
+ 
+  <div class="container my-5">
+  <!-- <h2 class="text-center mb-4" style="color: palevioletred;">Browse the New Collection</h2> -->
+  <div class="row"> 
+    
+    <div class="col-md-4 mb-4">
+      <div class="collection-item">
+        <img src="{% static 'images/x.jpg' %}" alt="" class="img-fluid">
+        <!-- <a href="cart_display.html" class="browse-btn ">Browse</a> -->
+      </div>
+    </div>
+
+    
+    <div class="col-md-4 mb-4">
+      <div class="collection-item">
+        <img src="{% static 'images/31.jpg' %}" alt="" class="img-fluid">
+        <!-- <a href="#" class="browse-btn">Browse</a> -->
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="collection-item">
+        <img src="{% static 'images/a.jpg' %}" alt="" class="img-fluid">
+        <!-- <a href="#" class="browse-btn ">Browse</a> -->
+      </div>
+    </div>
+  </div>
+</div>
+<footer class="footer" style="background: linear-gradient(170deg,#b682a5,#F0A762);;text-align: center;height: 550px;">
+  <div class="footer-content" style="display: flex;flex-wrap: wrap;margin-bottom: 20px;justify-content: space-between;">
+      
+
+
+      
+      <div class="footer-links" style="flex: 1;margin: 45px;text-align: left;">
+          <h3 class="footer-heading">Quick Links</h3>
+          <ul style="  list-style: none; padding: 0;margin: 0;">
+              <li style="margin: 8px 0;"><a href="#" style="color: #4c4c4c;text-decoration: none;font-size: 14px">Home</a></li>
+              <li style="margin: 8px 0;"><a href="#" style="color: #4c4c4c;text-decoration: none;font-size: 14px">Shop</a></li>
+              <li style="margin: 8px 0;"><a href="#" style="color: #4c4c4c;text-decoration: none;font-size: 14px">About</a></li>
+              <li style="margin: 8px 0;"><a href="#" style="color: #4c4c4c;text-decoration: none;font-size: 14px">Contact</a></li>
+          </ul>
+      </div>
+      <div class="footer-contact" style="flex: 1;margin: 45px;text-align: left;">
+          <h3 class="footer-heading">Contact Us</h3>
+          <p>Email: info@example.com</p>
+          <p>Phone: +123 456 789</p>
+      </div>
+      <div class="footer-socials" style="flex: 1;margin: 45px;text-align: left;">
+          <h3 class="footer-heading">Follow Us</h3>
+          <div class="social-icons" style="display: flex;justify-content: flex-start; gap: 15px;">
+              <a href="#" target="_blank" class="social-icon" style="color: #f6efef;font-size: 20px;"><i class="bi bi-facebook"></i></a>
+              <a href="#" target="_blank" class="social-icon" style="color: #f4e9e9;font-size: 20px;"><i class="bi bi-twitter"></i></a>
+              <a href="#" target="_blank" class="social-icon" style="color: #eee8e8;font-size: 20px;"><i class="bi bi-instagram"></i></a>
+              <a href="#" target="_blank" class="social-icon" style="color: #f4eeee;font-size: 20px;"><i class="bi bi-linkedin"></i></a>
+          </div>
+      </div>
+  </div>
+
+  <div class="footer-logo">
+    <img src="{% static 'images/logo.jpg' %}" class="logo" style="border-radius: 300px;width: 180px;" >
+  </div>
+  <br><br>
+  <div class="footer-bottom" style="padding: 10px;font-size: 14px; color: #4c4c4c;">
+      <p>&copy; 2024 Your Company. All rights reserved.</p>
+  </div>
+</footer>
+
+
+     
+</body>
+</html>

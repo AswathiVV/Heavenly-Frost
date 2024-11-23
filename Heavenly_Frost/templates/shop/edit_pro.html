@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Product</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static '/css/edit.css' %}">
+</head>
+<body>
+    <h1 style="padding-left: 40%;">Update product</h1><br>
+    <form action="" method="post" enctype="multipart/form-data" class="form-container">
+        {% csrf_token %}
+        <div class="form-group">
+            <h3>Product ID</h3>
+            <input type="text" name="pro_id" id="pro_id" placeholder="Product ID" value="{{data.cake_id}}">
+            <br><br>
+            <h3>Name</h3>
+            <input type="text" name="name" id="name" placeholder="Name" value="{{data.cake_name}}">
+            <br><br>
+            <h3>Price</h3>
+            <input type="number" name="price" id="price" placeholder="Price" value="{{data.price}}">
+            <br><br>
+            <h3>Description</h3>
+            <input type="text" name="description" id="description" placeholder="Description" value="{{data.description}}">
+            <br><br>
+            <h3>Image</h3>
+            <img src="{{data.img.url}}" alt="Product Image" class="product-image">
+            <br><br>
+            <input type="file" name="img" id="img" value="{{data.img}}">
+            <br><br>
+            <input type="submit" value="Update" class="submit-btn">
+        </div>
+        
+         
+    </form>
+    
+
+</body>
+</html>
